@@ -1,4 +1,4 @@
-#include "ejanus2.h"
+#include "ejanus.h"
 #include "lv_custom/lv_custom.h"
 #include <math.h>
 #include <stdlib.h>
@@ -252,7 +252,7 @@ static void begin()
     }
 }
 
-void ejanus2_create()
+void ejanus_create()
 {
     hres = lv_disp_get_hor_res(NULL);
     vres = lv_disp_get_ver_res(NULL);
@@ -1396,7 +1396,7 @@ void set_sys_property_value(SYS_PROPERTY property)
     lv_obj_set_hidden(ah_img, !(sys_property.ah == C_ON && gear_state == GEAR_P));
 }
 
-void ejanus2_start(uint32_t delayms)
+void ejanus_start(uint32_t delayms)
 {
     has_inited = 0;
     if (delayms <= 0) {

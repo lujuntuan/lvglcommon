@@ -1,4 +1,4 @@
-#include "ejanus2.h"
+#include "ejanus.h"
 #include "lv_custom/lv_custom.h"
 
 int main(void)
@@ -12,7 +12,7 @@ int main(void)
 
     lv_custom_init(LV_CUSTOM_DISP);
 
-    ejanus2_create();
+    ejanus_create();
 
     set_trip_value(99998000);
     set_total_value(99998000);
@@ -47,7 +47,7 @@ int main(void)
     sys_property.sea2 = C_ON;
     set_sys_property_value(sys_property);
 
-    ejanus2_start(300);
+    ejanus_start(300);
 
     lv_custom_exec();
 

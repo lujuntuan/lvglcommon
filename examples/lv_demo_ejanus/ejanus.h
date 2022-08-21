@@ -1,5 +1,5 @@
-#ifndef EJANUS2_H
-#define EJANUS2_H
+#ifndef EJANUS_H
+#define EJANUS_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -92,9 +92,9 @@ typedef struct {
  **********************/
 
 /**
- * Create a EJANUS2 application
+ * Create a EJANUS application
  */
-void ejanus2_create();
+void ejanus_create();
 void set_rpm(uint16_t rpm);
 void set_speed(uint16_t speed);
 void set_oil(uint16_t oil);
@@ -112,7 +112,7 @@ void set_press_temp_value(TIRE_PRESS_TEMP property);
 
 void set_sys_property_value(SYS_PROPERTY property);
 
-void ejanus2_start(uint32_t delayms);
+void ejanus_start(uint32_t delayms);
 
 /**********************
  *      MACROS
@@ -122,4 +122,4 @@ void ejanus2_start(uint32_t delayms);
 } /* extern "C" */
 #endif
 
-#endif //EJANUS2_H
+#endif //EJANUS_H
