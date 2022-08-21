@@ -1,3 +1,15 @@
+#*********************************************************************************
+#  *Copyright(C): Juntuan.Lu, 2020-2030, All rights reserved.
+#  *Author:  Juntuan.Lu
+#  *Version: 1.0
+#  *Date:  2021/02/27
+#  *Email: 931852884@qq.com
+#  *Description:
+#  *Others:
+#  *Function List:
+#  *History:
+#**********************************************************************************
+
 cmake_minimum_required(VERSION 3.7)
 project(lvglcommon LANGUAGES C)
 

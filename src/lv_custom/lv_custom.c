@@ -1,3 +1,15 @@
+/*********************************************************************************
+ *Copyright(C): Juntuan.Lu, 2020-2030, All rights reserved.
+ *Author:  Juntuan.Lu
+ *Version: 1.0
+ *Date:  2021/02/27
+ *Email: 931852884@qq.com
+ *Description:
+ *Others:
+ *Function List:
+ *History:
+ **********************************************************************************/
+
 #include "lv_custom.h"
 #include "lv_drivers/display/drm.h"
 #include "lv_drivers/display/fbdev.h"

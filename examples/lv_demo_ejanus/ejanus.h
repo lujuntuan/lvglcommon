@@ -1,3 +1,15 @@
+/*********************************************************************************
+ *Copyright(C): Juntuan.Lu, 2020-2030, All rights reserved.
+ *Author:  Juntuan.Lu
+ *Version: 1.0
+ *Date:  2021/02/27
+ *Email: 931852884@qq.com
+ *Description:
+ *Others:
+ *Function List:
+ *History:
+ **********************************************************************************/
+
 #ifndef EJANUS_H
 #define EJANUS_H
 
@@ -122,4 +134,4 @@ void ejanus_start(uint32_t delayms);
 } /* extern "C" */
 #endif
 
-#endif //EJANUS_H
+#endif // EJANUS_H

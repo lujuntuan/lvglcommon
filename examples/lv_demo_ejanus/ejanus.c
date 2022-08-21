@@ -1,3 +1,15 @@
+/*********************************************************************************
+ *Copyright(C): Juntuan.Lu, 2020-2030, All rights reserved.
+ *Author:  Juntuan.Lu
+ *Version: 1.0
+ *Date:  2021/02/27
+ *Email: 931852884@qq.com
+ *Description:
+ *Others:
+ *Function List:
+ *History:
+ **********************************************************************************/
+
 #include "ejanus.h"
 #include "lv_custom/lv_custom.h"
 #include <math.h>
@@ -279,7 +291,7 @@ static void create_main()
     lv_obj_set_width(panel, hres);
     lv_obj_set_height(panel, vres);
     lv_img_set_src(panel, &img_dial_panel);
-    //lv_obj_set_style_local_image_opa(panel, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, 50);
+    // lv_obj_set_style_local_image_opa(panel, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, 50);
 
     maincont = lv_cont_create(panel, NULL);
     lv_obj_set_width(maincont, hres);
@@ -1321,7 +1333,7 @@ void set_press_temp_value(TIRE_PRESS_TEMP property)
         }
     } else {
         lv_obj_set_hidden(tire1_img, 1);
-        //lv_img_set_src(tire1_img, NULL);
+        // lv_img_set_src(tire1_img, NULL);
         lv_obj_set_style_local_text_color(tire1_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     }
     if ((press_temp.right_front_press < 150 || press_temp.right_front_press > 300) || (press_temp.right_front_temp < -10 || press_temp.right_front_temp > 60)) {
@@ -1336,7 +1348,7 @@ void set_press_temp_value(TIRE_PRESS_TEMP property)
         }
     } else {
         lv_obj_set_hidden(tire2_img, 1);
-        //lv_img_set_src(tire2_img, NULL);
+        // lv_img_set_src(tire2_img, NULL);
         lv_obj_set_style_local_text_color(tire2_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     }
     if ((press_temp.left_behind_press < 150 || press_temp.left_behind_press > 300) || (press_temp.left_behind_temp < -10 || press_temp.left_behind_temp > 60)) {
@@ -1351,7 +1363,7 @@ void set_press_temp_value(TIRE_PRESS_TEMP property)
         }
     } else {
         lv_obj_set_hidden(tire3_img, 1);
-        //lv_img_set_src(tire3_img, NULL);
+        // lv_img_set_src(tire3_img, NULL);
         lv_obj_set_style_local_text_color(tire3_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     }
     if ((press_temp.right_behind_press < 150 || press_temp.right_behind_press > 300) || (press_temp.right_behind_temp < -10 || press_temp.right_behind_temp > 60)) {
@@ -1366,7 +1378,7 @@ void set_press_temp_value(TIRE_PRESS_TEMP property)
         }
     } else {
         lv_obj_set_hidden(tire4_img, 1);
-        //lv_img_set_src(tire4_img, NULL);
+        // lv_img_set_src(tire4_img, NULL);
         lv_obj_set_style_local_text_color(tire4_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     }
 

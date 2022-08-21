@@ -1,7 +1,14 @@
-﻿/**
- * @file win32drv.c
- *
- */
+﻿/*********************************************************************************
+ *Copyright(C): Juntuan.Lu, 2020-2030, All rights reserved.
+ *Author:  Juntuan.Lu
+ *Version: 1.0
+ *Date:  2021/02/27
+ *Email: 931852884@qq.com
+ *Description:
+ *Others:
+ *Function List:
+ *History:
+ **********************************************************************************/
 
 /*********************
  *      INCLUDES
@@ -48,7 +55,7 @@
  * @return If the function succeeds, the return value is a handle to the device
  *         context (DC) for the frame buffer. If the function fails, the return
  *         value is NULL, and PixelBuffer parameter is NULL.
-*/
+ */
 static HDC lv_win32_create_frame_buffer(
     _In_opt_ HWND WindowHandle,
     _In_ LONG Width,
@@ -65,7 +72,7 @@ static HDC lv_win32_create_frame_buffer(
  *         function fails, the return value is zero.
  * @remarks You need to use this function in Windows 10 Threshold 1 or Windows
  *          10 Threshold 2.
-*/
+ */
 static BOOL lv_win32_enable_child_window_dpi_message(
     _In_ HWND WindowHandle);
 
@@ -329,8 +336,7 @@ static BOOL lv_win32_enable_child_window_dpi_message(
 
     typedef BOOL(WINAPI * FunctionType)(HWND, BOOL);
 
-    FunctionType pFunction = (FunctionType)(
-        GetProcAddress(ModuleHandle, "EnableChildWindowDpiMessage"));
+    FunctionType pFunction = (FunctionType)(GetProcAddress(ModuleHandle, "EnableChildWindowDpiMessage"));
     if (!pFunction) {
         return FALSE;
     }
@@ -390,8 +396,7 @@ static bool lv_win32_mouse_driver_read_callback(
 {
     UNREFERENCED_PARAMETER(indev_drv);
 
-    data->state = (lv_indev_state_t)(
-        g_mouse_pressed ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL);
+    data->state = (lv_indev_state_t)(g_mouse_pressed ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL);
     data->point.x = GET_X_LPARAM(g_mouse_value);
     data->point.y = GET_Y_LPARAM(g_mouse_value);
     return false;
@@ -403,8 +408,7 @@ static bool lv_win32_keyboard_driver_read_callback(
 {
     UNREFERENCED_PARAMETER(indev_drv);
 
-    data->state = (lv_indev_state_t)(
-        g_keyboard_pressed ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL);
+    data->state = (lv_indev_state_t)(g_keyboard_pressed ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL);
 
     WPARAM KeyboardValue = g_keyboard_value;
 
@@ -464,8 +468,7 @@ static bool lv_win32_mousewheel_driver_read_callback(
 {
     UNREFERENCED_PARAMETER(indev_drv);
 
-    data->state = (lv_indev_state_t)(
-        g_mousewheel_pressed ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL);
+    data->state = (lv_indev_state_t)(g_mousewheel_pressed ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL);
     data->enc_diff = g_mousewheel_value;
     g_mousewheel_value = 0;
 
